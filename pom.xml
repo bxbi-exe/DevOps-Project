@@ -9,8 +9,8 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>mk.ukim.finki.wp.kol2022</groupId>
-	<artifactId>g3</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>devops-project</artifactId>
+	<version>1.0</version>
 	<name>Kol 2022 group 3</name>
 	<description>Kol 2022 group 3</description>
 	<properties>

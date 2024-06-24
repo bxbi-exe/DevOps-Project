@@ -1,0 +1,24 @@
+version: '1'
+
+services:
+  postgres:
+    image: postgres
+    container_name: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Bobi
+      POSTGRES_DB: forumusers
+    ports:
+      - "5432:5432"
+
+  spring-boot-app:
+    image: bxbi/spring-boot-app
+    container_name: spring-boot-app
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/forumusers
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: Bobi
+    ports:
+      - "8080:8082"
+    depends_on:
+        - postgres
