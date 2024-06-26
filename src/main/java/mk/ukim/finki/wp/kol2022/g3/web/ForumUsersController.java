@@ -36,6 +36,7 @@ public class ForumUsersController {
     @GetMapping({"/", "/users"})
     public String showList(Long interestId, Integer age, Model model) {
         List<ForumUser> forumUsers;
+        int a=1;
         if (interestId == null && age == null) {
             forumUsers = this.service.listAll();
         } else {
